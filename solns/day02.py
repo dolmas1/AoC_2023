@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-import pandas as pd
-import numpy as np
 import re
 
-f = open("inputs/02.txt", "r")
-#f = open("inputs/02_sample.txt", "r")
-input = f.readlines()
+filename = "inputs/day02.txt"
+#filename = "inputs/day02_sample.txt"
+
+with open(filename) as f:
+    input = f.read().splitlines()
 
 def parse_line(x):
     
@@ -59,4 +59,7 @@ def solve(input):
             
     return ans_1, ans_2
 
-print(solve(input))
+ans_1, ans_2 = solve(input)
+
+print(ans_1)
+print(ans_2)

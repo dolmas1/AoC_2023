@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-import pandas as pd
-import numpy as np
 import re
 
-f = open("inputs/01.txt", "r")
-#f = open("inputs/01_sample.txt", "r")
-#f = open("inputs/01_sample2.txt", "r")
-input = f.readlines()
+filename = "inputs/day01.txt"
+#filename = "inputs/day01_sample.txt"
+#filename = "inputs/day01_sample2.txt"
+
+with open(filename) as f:
+    input = f.read().splitlines()
 
 def solve_pt1(input):
     
@@ -74,4 +74,8 @@ def solve_pt2(input, mapping):
         
     return ans_2
 
-print(solve_pt1(input), solve_pt2(input, mapping))
+ans_1 = solve_pt1(input)
+ans_2 = solve_pt2(input, mapping)
+
+print(ans_1)
+print(ans_2)
