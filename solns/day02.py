@@ -11,7 +11,7 @@ with open(filename) as f:
 def parse_line(x):
     
     id = x.split(':')[0]
-    id = int(re.search('\d+', x)[0])
+    id = int(re.search(r'\d+', x)[0])
 
     
     game_info = x.split(':')[1].split(';')
@@ -20,9 +20,9 @@ def parse_line(x):
     
     for y in game_info:
 
-        shown_reds = re.search('(\d+) red', y)
-        shown_blues = re.search('(\d+) blue', y)
-        shown_greens = re.search('(\d+) green', y)
+        shown_reds = re.search(r'(\d+) red', y)
+        shown_blues = re.search(r'(\d+) blue', y)
+        shown_greens = re.search(r'(\d+) green', y)
         
         if shown_reds:
             red = max(red, int(shown_reds[1]))

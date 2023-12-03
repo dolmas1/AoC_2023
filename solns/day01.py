@@ -11,7 +11,7 @@ with open(filename) as f:
 
 def solve_pt1(input):
     
-    nums = [re.findall('\d', l) for l in input]
+    nums = [re.findall(r'\d', l) for l in input]
 
     nums_first_last = [int(x[0] + x[-1]) for x in nums]
     return sum(nums_first_last)
@@ -28,7 +28,7 @@ mapping = {'one': '1',
 
 def match_number(s, mapping, rev = True):
     
-    dig_match = re.match('\d', s)
+    dig_match = re.match(r'\d', s)
     if dig_match:
         return dig_match[0]
 

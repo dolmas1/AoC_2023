@@ -34,7 +34,7 @@ def check_neighbourhood(input, span, n = 1):
     # search until you find a symbol:
     for i in range(neighbourhood_min_i, neighbourhood_max_i+1):
         for j in range(neighbourhood_min_j, neighbourhood_max_j+1):
-            if re.match('[^\d\.]', input[i][j]): 
+            if re.match(r'[^\d\.]', input[i][j]): 
                 return True
 
     return False
@@ -46,7 +46,7 @@ def find_numbers(input):
     num_spans = []
     
     for i, l in enumerate(input):
-        for match in re.finditer('(\d+)', l):
+        for match in re.finditer(r'(\d+)', l):
             nums.append(int(match.group()))
             num_spans.append([[i, match.span()[0]], [i, match.span()[1]-1]])
 
@@ -57,7 +57,7 @@ def find_potential_gears(input):
     "Returns the [i,j] locations of all * characters"
     potential_gears = []
     for i, l in enumerate(input):
-            for match in re.finditer('(\*)', l):
+            for match in re.finditer(r'(\*)', l):
 
                 potential_gears.append([i, match.span()[0]])
     return potential_gears
