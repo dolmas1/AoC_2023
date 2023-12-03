@@ -46,7 +46,7 @@ def find_numbers(input):
     num_spans = []
     
     for i, l in enumerate(input):
-        for match in re.finditer(r'(\d+)', l):
+        for match in re.finditer('(\d+)', l):
             nums.append(int(match.group()))
             num_spans.append([[i, match.span()[0]], [i, match.span()[1]-1]])
 
@@ -57,7 +57,7 @@ def find_potential_gears(input):
     "Returns the [i,j] locations of all * characters"
     potential_gears = []
     for i, l in enumerate(input):
-            for match in re.finditer(r'(\*)', l):
+            for match in re.finditer('(\*)', l):
 
                 potential_gears.append([i, match.span()[0]])
     return potential_gears
