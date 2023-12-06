@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import re
+
 sample = 0
 
 if sample == True:
