@@ -2,9 +2,9 @@
 sample = 0
 
 if sample == True:
-    filename = "inputs/day08_sample.txt"
+    filename = "inputs/day09_sample.txt"
 else:
-    filename = "inputs/day08.txt"
+    filename = "inputs/day09.txt"
 
 with open(filename) as f:
     input = f.read().splitlines()
@@ -37,7 +37,7 @@ def solve_line(line):
 
 def solve(input):
     inputs = parse(input)
-    zips = list(zip(*[(solve_line(l), solve_line(l[::-1])) for l in inputs]))
+    zips = list(zip(*[(solve_line(l), solve_line(l[::-1])) for l in inputs])) ## TODO: do properly rather than solve each direction separately
     ans_1 = sum(zips[0])
     ans_2 = sum(zips[1])
     return ans_1, ans_2
