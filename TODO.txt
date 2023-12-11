@@ -1,0 +1,21 @@
+Day 11:
+    Remove numpy (collects rows with all zeros another way)
+    Optimise - remove the grid entirely?
+    Optimise - write better adjusted difference func?
+    Optimise - calculating adjusted distances from each galaxy to origin, rather than directly between pairs?
+
+Day 10:
+    Finish pt 2 (scanning left to right and toggling inside/outside:
+                    Where 2* vertical pipes flip, where 2*horiztonal tiles don't flip, when horizontal U or V shape don't flip, where horizontal S shape then flip)
+
+Day 9:
+    Optimise pt2 - implement alternating differences along left side, rather than reverse and rerun pt1
+
+Day 5:
+    Optimise: cleanup/dedup any overlaps between seed ranges - might be quicker?
+
+Day 3:
+    Figure out how to beat Dan
+
+Day 1:
+    Figure out how to beat Dan
