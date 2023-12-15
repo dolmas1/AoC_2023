@@ -19,7 +19,7 @@ def parse_pt2(s):
 
 def parse(input):
     parsed_pt1 = input.split(',')
-    parsed_pt2 = [parse_pt2(s) for s in parsed]
+    parsed_pt2 = [parse_pt2(s) for s in parsed_pt1]
     return parsed_pt1, parsed_pt2
 
 def HASH(str_input):
