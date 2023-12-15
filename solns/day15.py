@@ -62,7 +62,7 @@ def solve(input):
         ans_1 += HASH(str_input)
         
     ans_2 = 0
-    boxes = {([], []) for i in range(256)}
+    boxes = {i: ([], []) for i in range(256)}
 
     for label, f in parsed_pt2:
         if f > 0:
