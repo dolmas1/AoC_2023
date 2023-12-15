@@ -8,8 +8,11 @@ if sample == True:
 else:
     filename = "inputs/day15.txt"
 
+#with open(filename) as f:
+#    input = f.read()#.splitlines()
+
 with open(filename) as f:
-    input = f.read()#.splitlines()
+    input = f.readlines()[0].rstrip("\n")
 
 def parse_pt2(s):
     if s[-2] == '=':
