@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-from collections import defaultdict 
-
 sample = 0
 
 if sample == True:
@@ -33,9 +31,6 @@ def HASH(str_input):
         current_val = current_val % 256
     return current_val
 
-def def_value(): 
-    return ([], [])
-
 def add_lens(label, f, boxes):
     labels, focals = boxes[HASH(label)]
 
@@ -67,7 +62,7 @@ def solve(input):
         ans_1 += HASH(str_input)
         
     ans_2 = 0
-    boxes = defaultdict(def_value)
+    boxes = {([], []) for i in range(256)}
 
     for label, f in parsed_pt2:
         if f > 0:
